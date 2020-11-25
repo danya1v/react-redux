@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import {deleteFromCart} from '../../actions';
+import {deleteFromCart} from '../../actions';
 import WithRestoService from '../hoc';
 
 import './cart-table.scss';
@@ -48,8 +48,8 @@ const mapStateToProps = ({items}) => {
     }
 };
 
-// const mapDispatchToProps = {
-//     deleteFromCart
-// }
+const mapDispatchToProps = {
+    deleteFromCart
+}
 
 export default WithRestoService()(connect(mapStateToProps, mapDispatchToProps)(CartTable));
